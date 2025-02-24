@@ -1,9 +1,6 @@
 <script setup>
 const route = useRoute();
-
-function toTitleCase(text) {
-   return text.replace(/(^\w|\s\w)/g, m => m.toUpperCase());
-}
+const { toTitleCase } = useUtilities();
 
 useHead({
   title: toTitleCase(route.params.name)

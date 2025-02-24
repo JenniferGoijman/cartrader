@@ -1,9 +1,8 @@
 <script setup>
-const route = useRoute();
+import { useUtilities } from '~/composables/useUtilities';
 
-function toTitleCase(text) {
-   return text.replace(/(^\w|\s\w)/g, m => m.toUpperCase());
-}
+const route = useRoute();
+const { toTitleCase } = useUtilities();
 
 useHead({
   title: `${route.params.brand ? toTitleCase(route.params.brand) : 'Cars'} in ${toTitleCase(route.params.city)}`
