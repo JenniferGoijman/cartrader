@@ -7,9 +7,14 @@ useHead({
   title: toTitleCase(route.params.name)
 })
 
-const car = computed(() => {
-  return cars.find(({ id }) => id === parseInt(route.params.id))
-});
+const car = computed(() =>  cars.find(({ id }) => id === parseInt(route.params.id)));
+
+if (!car.value) {
+  throw createError({
+      statusCode: 404,
+      statusMessage: `Car with ID ${route.params.id} does not exist.`
+  });
+}
 
 definePageMeta({
   layout: 'custom'
