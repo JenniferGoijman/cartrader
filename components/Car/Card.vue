@@ -2,19 +2,22 @@
 import heartFilled from '@/assets/heartFilled.png';
 import heartOutline from '@/assets/heartOutline.png';
 
-const props = defineProps({
+const _props = defineProps({
   // eslint-disable-next-line vue/require-default-prop
   car: Object,
+  favored: Boolean
 })
-
-const liked = useState(`liked-${props.car.id}`, () => {
-  return false
-});
+const emit = defineEmits(['favor']);
 </script>
 
 <template>
   <div class="relative shadow border w-full overflow-hidden mb-5 cursor-pointer h-[200px]">
-    <img class="absolute w-7 right-5 top-2 z-20" :src="liked ? heartFilled : heartOutline" alt="" @click="liked = !liked">
+    <img
+      class="absolute w-7 right-5 top-2 z-20"
+      :src="favored ? heartFilled : heartOutline"
+      alt=""
+      @click="emit('favor', car.id)"
+    >
     <div class="flex h-full" @click="navigateTo(`/car/${car.name}-${car.id}`)">
       <NuxtImg
         :src="car.url"
