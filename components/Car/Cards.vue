@@ -18,12 +18,14 @@ const handleLikes = (id) => {
 
 <template>
   <div class="w-full">
-    <CarCard
+    <ClientOnly>
+      <CarCard
       v-for="car in cars"
       :key="car.id"
       :car="car"
       :favored="car.id in favorites"
       @favor="handleLikes"
-    />
+      />
+    </ClientOnly>
   </div>
 </template>
