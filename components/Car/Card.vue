@@ -1,13 +1,21 @@
 <script setup>
-const _props = defineProps({
+import heartFilled from '@/assets/heartFilled.png';
+import heartOutline from '@/assets/heartOutline.png';
+
+const props = defineProps({
   // eslint-disable-next-line vue/require-default-prop
   car: Object,
 })
+
+const liked = useState(`liked-${props.car.id}`, () => {
+  return false
+});
 </script>
 
 <template>
-  <div class="shadow border w-full overflow-hidden mb-5 cursor-pointer h-[200px]" @click="navigateTo(`/car/${car.name}-${car.id}`)">
-    <div class="flex h-full">
+  <div class="relative shadow border w-full overflow-hidden mb-5 cursor-pointer h-[200px]">
+    <img class="absolute w-7 right-5 top-2 z-20" :src="liked ? heartFilled : heartOutline" alt="" @click="liked = !liked">
+    <div class="flex h-full" @click="navigateTo(`/car/${car.name}-${car.id}`)">
       <NuxtImg
         :src="car.url"
         :alt="car.name"
