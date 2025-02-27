@@ -16,7 +16,7 @@ definePageMeta({
 <template>
   <div class="mt-32 flex">
     <NuxtErrorBoundary>
-      <CarSideBar />
+      <CarFilters />
       <NuxtPage />
 
       <template #error="{ error }">
