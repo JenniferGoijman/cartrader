@@ -1,15 +1,15 @@
-<script setup>
+<script setup lang="ts">
 const { brands } = useCars();
 
-const _props = defineProps({
-  open: Boolean,
-});
+defineProps<{
+  open: boolean;
+}>();
 
 const emit = defineEmits(['update-modal']);
 
 const route = useRoute();
 
-const onChangeBrand = (brand) => {
+const onChangeBrand = (brand: string) => {
   emit('update-modal');
   navigateTo(`/city/${route.params.city}/car/${brand}`);
 }

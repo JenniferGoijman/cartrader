@@ -1,8 +1,7 @@
-<script setup>
-const _props = defineProps({
-  // eslint-disable-next-line vue/require-default-prop
-  features: Array
-});
+<script setup lang="ts">
+defineProps<{
+  features: Array<string>
+}>();
 </script>
 
 <template>

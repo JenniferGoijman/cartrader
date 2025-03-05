@@ -1,9 +1,11 @@
-<script setup>
+<script setup lang="ts">
+import type { Favorites } from '~/types/Favorites';
+
 const { cars } = useCars();
 
-const favorites = useLocalStorage('favorites', {});
+const favorites = useLocalStorage<Favorites>('favorites', {});
 
-const handleLikes = (id) => {
+const handleLikes = (id: number) => {
   if (id in favorites.value) {
     const { [id]: _, ...rest } = favorites.value;
     favorites.value = rest;

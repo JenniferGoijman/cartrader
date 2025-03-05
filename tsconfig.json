@@ -1,4 +1,6 @@
 {
-  // https://nuxt.com/docs/guide/concepts/typescript
+  "compilerOptions": {
+    "types": ["@types/node", "@nuxt/types", "@vue/runtime-dom"]
+  },
   "extends": "./.nuxt/tsconfig.json"
 }

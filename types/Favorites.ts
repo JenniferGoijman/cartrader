@@ -1,0 +1,1 @@
+export type Favorites = Record<number, boolean>;

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const city = ref('');
 const handleSearch = () => {
   if (!city.value) return;

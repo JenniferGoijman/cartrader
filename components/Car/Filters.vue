@@ -1,11 +1,13 @@
-<script setup>
+<script setup lang="ts">
+import type { Filters } from '~/types/Filters';
+
 const modal = ref({
   location: false,
   brand: false,
   price: false,
 });
 
-const updateModal = (key) => {
+const updateModal = (key: Filters) => {
   modal.value[key] = !modal.value[key]
 }
 </script>

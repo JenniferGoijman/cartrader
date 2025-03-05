@@ -1,12 +1,12 @@
-<script setup>
+<script setup lang="ts">
+import type { CarModel } from '~/types/Car.model';
 import heartFilled from '@/assets/heartFilled.png';
 import heartOutline from '@/assets/heartOutline.png';
 
-const _props = defineProps({
-  // eslint-disable-next-line vue/require-default-prop
-  car: Object,
-  favored: Boolean
-})
+defineProps<{
+  car: CarModel;
+  favored: boolean;
+}>();
 const emit = defineEmits(['favor']);
 </script>
 
@@ -18,7 +18,7 @@ const emit = defineEmits(['favor']);
       alt=""
       @click="emit('favor', car.id)"
     >
-    <div class="flex h-full" @click="navigateTo(`/car/${car.name}-${car.id}`)">
+    <div class="flex h-full" @click="navigateTo(`/car${car.name}-${car.id}`)">
       <NuxtImg
         :src="car.url"
         :alt="car.name"

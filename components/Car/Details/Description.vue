@@ -1,8 +1,7 @@
-<script setup>
-const _props = defineProps({
-  // eslint-disable-next-line vue/require-default-prop
-  description: String
-});
+<script setup lang="ts">
+defineProps<{
+  description: string
+}>();
 </script>
 
 <template>

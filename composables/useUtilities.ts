@@ -1,5 +1,5 @@
 export const useUtilities = () => {
-  function toTitleCase(text) {
+  function toTitleCase(text: string) {
     return text.replace(/(^\w|\s\w)/g, (m) => m.toUpperCase());
   }
 

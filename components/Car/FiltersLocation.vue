@@ -1,7 +1,7 @@
-<script setup>
-const _props = defineProps({
-  open: Boolean,
-});
+<script setup lang="ts">
+defineProps<{
+  open: boolean;
+}>();
 
 const emit = defineEmits(['update-modal']);
 

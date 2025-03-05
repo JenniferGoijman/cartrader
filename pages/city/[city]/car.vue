@@ -1,16 +1,16 @@
-<script setup>
+<script setup lang="ts">
 import { useUtilities } from '~/composables/useUtilities';
 
 const route = useRoute();
 const { toTitleCase } = useUtilities();
 
 useHead({
-  title: `${route.params.brand ? toTitleCase(route.params.brand) : 'Cars'} in ${toTitleCase(route.params.city)}`
-})
+  title: `${route.params.brand ? toTitleCase(route.params.brand as string) : 'Cars'} in ${toTitleCase(route.params.city as string)}`
+});
 
 definePageMeta({
-    layout: 'custom'
-})
+  layout: 'custom'
+});
 </script>
 
 <template>

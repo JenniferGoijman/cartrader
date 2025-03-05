@@ -1,13 +1,13 @@
-<script setup>
+<script setup lang="ts">
 const route = useRoute();
 const { cars } = useCars();
 const { toTitleCase } = useUtilities();
 
 useHead({
-  title: toTitleCase(route.params.name)
-})
+  title: toTitleCase(route.params.name as string)
+});
 
-const car = computed(() =>  cars.find(({ id }) => id === parseInt(route.params.id)));
+const car = computed(() =>  cars.find(({ id }) => id === parseInt(route.params.id as string)));
 
 if (!car.value) {
   throw createError({

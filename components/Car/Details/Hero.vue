@@ -1,8 +1,10 @@
-<script setup>
-const _props = defineProps({
-  // eslint-disable-next-line vue/require-default-prop
-  car: Object
-});
+<script setup lang="ts">
+import type { CarModel } from '~/types/Car.model';
+
+defineProps<{
+  car: CarModel;
+}>();
+
 </script>
 
 <template>

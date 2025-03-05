@@ -18,16 +18,21 @@
     "@nuxtjs/tailwindcss": "^6.13.1",
     "@vueuse/core": "^12.7.0",
     "@vueuse/nuxt": "^12.7.0",
-    "nuxt": "^3.15.4",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.1.0",
+    "@nuxt/schema": "^3.15.4",
+    "@nuxt/types": "^2.18.1",
+    "@nuxt/typescript-build": "^3.0.2",
+    "@vue/runtime-dom": "^3.5.13",
     "eslint": "^9.20.1",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
+    "nuxt": "^3.15.4",
     "prettier": "^3.5.1",
-    "typescript": "^5.7.3"
+    "typescript": "^5.8.2",
+    "vue-tsc": "^2.1.10"
   }
 }
