@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Favorites } from '~/types/Favorites';
+import type { Favorites } from '~/types/Favorites.model';
 
 const { cars } = useCars();
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Filters } from '~/types/Filters';
+import type { Filters } from '~/types/Filters.model';
 
 const modal = ref({
   location: false,

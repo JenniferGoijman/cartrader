@@ -1,7 +1,7 @@
 import cars from "@/data/cars.json";
 import brands from "@/data/brands.json";
 import type { CarModel } from "~/types/Car.model";
-import type { Brand } from "~/types/Filters";
+import type { Brand } from "~/types/Filters.model";
 
 export const useCars = () => {
   return {
