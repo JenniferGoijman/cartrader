@@ -23,7 +23,7 @@ definePageMeta({
         <div class="text-center mx-auto flex flex-col">
           <h1 class="text-5xl text-red-600">Sorry, something went wrong</h1>
           <code>{{ error }}</code>
-          <button class="rounded mt-7 text-2xl bg-blue-400 px-7 py-4 text-white" @click="error.value = null">Go Back</button>
+          <button class="rounded mt-7 text-2xl bg-green-500 px-7 py-4 text-white" @click="error.value = null">Go Back</button>
         </div>
     </template></NuxtErrorBoundary>
   </div>
