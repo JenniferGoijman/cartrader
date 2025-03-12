@@ -8,7 +8,12 @@ const cars = await useFetchCars(route.params.city as string, {
   minPrice: queryParams?.minPrice,
   maxPrice: queryParams?.maxPrice,
   brand: queryParams?.brand,
-})
+});
+
+watch(
+  () => route.query,
+  () => window.location.reload()
+);
 
 </script>
 
