@@ -20,5 +20,6 @@ watch(
 <template>
   <div>
     <CarCards v-if="cars && cars.length > 0" :cars="cars" />
+    <h1 v-else>No cars found</h1>
   </div>
 </template>
