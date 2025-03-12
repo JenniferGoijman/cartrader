@@ -28,7 +28,7 @@ const emit = defineEmits(['favor']);
         <h1 class="text-2xl text-green-700">{{ car.name }}</h1>
         <p class="text-gray-700">{{ car.description }}</p>
       </div>
-      <h1 class="mt-auto text-xl">{{ car.price }}</h1>
+      <h1 class="mt-auto text-xl">${{ car.price }}</h1>
     </div>
   </div>
 </template>

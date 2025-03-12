@@ -1,7 +1,7 @@
 import cars from "@/data/cars.json";
 import type { CarModel } from "~/types/Car.model";
 
-interface QueryParams {
+export interface QueryParams {
   brand?: string;
   minPrice?: string;
   maxPrice?: string;
@@ -10,7 +10,6 @@ interface QueryParams {
 export default defineEventHandler((event) => {
   const { city } = event.context.params || {};
   const { brand, minPrice, maxPrice } = getQuery(event) as QueryParams;
-
 
   let filteredCars = cars as CarModel[];
 

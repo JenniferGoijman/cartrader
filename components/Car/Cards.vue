@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import type { CarModel } from '~/types/Car.model';
 import type { Favorites } from '~/types/Favorites.model';
 
-const { cars } = useCars();
+defineProps<{
+  cars: CarModel[];
+}>();
 
 const favorites = useLocalStorage<Favorites>('favorites', {});
 
@@ -22,11 +25,11 @@ const handleLikes = (id: number) => {
   <div class="w-full">
     <ClientOnly>
       <CarCard
-      v-for="car in cars"
-      :key="car.id"
-      :car="car"
-      :favored="car.id in favorites"
-      @favor="handleLikes"
+        v-for="car in cars"
+        :key="car.id"
+        :car="car"
+        :favored="car.id in favorites"
+        @favor="handleLikes"
       />
     </ClientOnly>
   </div>
