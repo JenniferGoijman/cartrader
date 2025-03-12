@@ -2,9 +2,10 @@
   {
     "id": 1,
     "name": "Toyota Land Cruiser",
-    "price": "85,000",
+    "price": 85000,
     "url": "https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2023/08/23/16928101048400.jpg",
     "seats": 7,
+    "brand": "Toyota",
     "miles": "10,000",
     "features": ["No Accidents", "Low KM", "Vehicle Detailed", "Leather Interior", "Advanced Safety Features"],
     "description": "The Toyota Land Cruiser 250 VX-L combines rugged off-road capability with luxurious comfort, making it perfect for both city driving and adventurous journeys."
@@ -12,9 +13,10 @@
   {
     "id": 2,
     "name": "Range Rover Sport",
-    "price": "84,777",
+    "price": 84777,
     "url": "https://www.carhelpcanada.com/wp-content/uploads/2019/12/2020-Range-Rover-Evoque-2.jpg",
     "seats": 5,
+    "brand": "Range Rover",
     "miles": "14,666",
     "features": ["No Accidents", "Low KM", "Vehicle Detailed", "Leather Interior"],
     "description": "The Range Rover Sport combines luxury and performance, offering a smooth ride, advanced technology, and a sleek design. Perfect for both city driving and off-road adventures."
@@ -22,9 +24,10 @@
   {
     "id": 3,
     "name": "Rolls Royce Ghost",
-    "price": "455,000",
+    "price": 455000,
     "url": "https://robbreport.com/wp-content/uploads/2021/03/1-5.jpg?w=1000",
     "seats": 5,
+    "brand": "Rolls Royce",
     "miles": "53,666",
     "features": ["No Accidents", "Low KM", "Vehicle Detailed", "Leather Interior"],
     "description": "The Rolls Royce Ghost is the epitome of luxury, offering unparalleled comfort, cutting-edge technology, and a whisper-quiet ride. A true statement of elegance and sophistication."
@@ -32,11 +35,76 @@
   {
     "id": 4,
     "name": "Porsche Taycan",
-    "price": "180,434",
+    "price": 180434,
     "url": "https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXkBuNYdMGF4tl3U0%25z8rMHIspMBvMZq6G5OtgSv31nBJaA4qh4NSEGewirQ91wRmWBi2Ch7gVdcQTxUlhDfHJIspAnPpsMiZJyNO7MctBvonm4f8dXFyInPED6u6cIN9nReRv8o4y7z9V6F%25vUqJ6spAnPT0NiZJyNKA9ctBvoqKLf8dXFOcvPED6uTDWN9nRe2DIo4y7zVpkF%25m8cAzGs8bGVC3F5xc3eUNSWa9vJA4q8C",
     "seats": 5,
+    "brand": "Porsche",
     "miles": "0",
     "features": ["No Accidents", "Low KM", "Vehicle Detailed", "Leather Interior"],
     "description": "The Porsche Taycan is a fully electric sports car that delivers thrilling performance, stunning design, and zero emissions. Experience the future of driving with this cutting-edge vehicle."
+  },
+  {
+    "id": 5,
+    "name": "Land Rover Luxury",
+    "price": 200434,
+    "url": "https://www.motortrend.com/uploads/2022/04/2022-Range-Rover-First-Edition-P530-SWB-on-road-1.jpg?fit=around%7C875:492",
+    "seats": 5,
+    "brand": "Land Rover",
+    "city": "Toronto",
+    "miles": "0",
+    "features": ["No Accidents", "Low KM", "Vehicle Detailed", "Leather Interior"],
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis odio et"
+  },
+  {
+    "id": 6,
+    "name": "Toyota Corolla",
+    "year": 2015,
+    "price": 23000,
+    "url": "https://crdms.images.consumerreports.org/c_lfill,w_470,q_auto,f_auto/prod/cars/chrome/white/2022TOC040001_1280_01",
+    "seats": 5,
+    "brand": "Toyota",
+    "city": "Toronto",
+    "miles": "0",
+    "features": ["No Accidents", "Low KM", "Vehicle Detailed", "Leather Interior"],
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis odio et"
+  },
+  {
+    "id": 7,
+    "name": "Toyota Sienna",
+    "year": 2019,
+    "price": 34000,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/22/2021_Toyota_Sienna_XLE_Hybrid%2C_front_12.21.21.jpg",
+    "seats": 5,
+    "brand": "Toyota",
+    "city": "Toronto",
+    "miles": "0",
+    "features": ["No Accidents", "Low KM", "Vehicle Detailed", "Leather Interior"],
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis odio et"
+  },
+  {
+    "id": 8,
+    "name": "Porsche Targa",
+    "year": 2014,
+    "price": 250000,
+    "url": "https://hips.hearstapps.com/hmg-prod/images/2021-porsche-911-targa-4-4s-108-1597085217.jpg?crop=0.521xw:0.389xh;0.274xw,0.413xh&resize=1200:*",
+    "seats": 5,
+    "brand": "Porsche",
+    "city": "Toronto",
+    "miles": "0",
+    "features": ["No Accidents", "Low KM", "Vehicle Detailed", "Leather Interior"],
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis odio et"
+  },
+  {
+    "id": 9,
+    "name": "Kia Seltos",
+    "year": 2012,
+    "price": 39000,
+    "url": "https://i.gaw.to/content/photos/53/04/530444-kia-seltos-2024-une-bonne-mise-a-jour-s-en-vient.jpg?1024x640",
+    "seats": 5,
+    "brand": "Kia",
+    "city": "Miami",
+    "miles": "0",
+    "features": ["No Accidents", "Low KM", "Vehicle Detailed", "Leather Interior"],
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis odio et"
   }
 ]
