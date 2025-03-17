@@ -18,7 +18,7 @@ const emit = defineEmits(['favor']);
       alt=""
       @click="emit('favor', car.id)"
     >
-    <div class="flex h-full" @click="navigateTo(`/car${car.name}-${car.id}`)">
+    <div class="flex h-full" @click="navigateTo(`/car/${car.name}-${car.id}`)">
       <NuxtImg
         :src="car.url"
         :alt="car.name"

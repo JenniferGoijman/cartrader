@@ -6,8 +6,8 @@ export const useFetchCars = async (city: string, filter: QueryParams) => {
 
   if (error.value) {
     throw createError({
-      ...error.value,
-      statusMessage: "Unable to fetch cars"
+      statusCode: error.value.statusCode,
+      statusMessage: error.value.statusMessage
     })
   }
 
