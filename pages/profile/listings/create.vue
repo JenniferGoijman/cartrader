@@ -9,18 +9,20 @@ const { brands } = useCars();
 
 const info = useState<AddInfo>("addInfo", () => {
   return {
-    make: "",
+    brand: "",
     model: "",
     year: "",
-    miles: "",
     price: "",
+    miles: "",
     city: "",
     seats: "",
     features: "",
     description: "",
-    image: null,
+    image: " ",
   };
 });
+
+const errorMessage = ref("");
 
 const onChangeInput = (data: string, name: Exclude<keyof AddInfo, "image">) => {
   info.value[name] = data;
@@ -45,29 +47,67 @@ const inputs = [
   },
   {
     id: 3,
+    title: "Price *",
+    name: "price",
+    placeholder: "10000",
+  },
+  {
+    id: 4,
     title: "Miles *",
     name: "miles",
     placeholder: "10000",
   },
   {
-    id: 4,
+    id: 5,
     title: "City *",
     name: "city",
     placeholder: "Austin",
   },
   {
-    id: 5,
+    id: 6,
     title: "Number of Seats *",
     name: "seats",
     placeholder: "5",
   },
   {
-    id: 6,
+    id: 7,
     title: "Features *",
     name: "features",
     placeholder: "Leather Interior, No Accidents",
   },
 ];
+
+
+const handleSubmit = async () => {
+  const body = {
+    ...info.value,
+    name: `${info.value.brand} ${info.value.model}`,
+    price: parseInt(info.value.price),
+    year: parseInt(info.value.year),
+    seats: parseInt(info.value.seats),
+    miles: parseInt(info.value.miles),
+    features: info.value.features.split(','),
+    image: 'www.example.com',
+    listerId: '111'
+  };
+
+  try {
+    const response = await $fetch("/api/car/listings", {
+      method: 'POST',
+      body
+    });
+    console.log('>>> response', response)
+    navigateTo('/profile/listings');
+  } catch (error) {
+    if (error instanceof Error) {
+      errorMessage.value = error.message;
+    } else if (typeof error === 'object' && error !== null && 'statusMessage' in error) {
+      errorMessage.value = (error as { statusMessage: string }).statusMessage;
+    } else {
+      errorMessage.value = 'An unknown error occurred';
+    }
+  }
+}
 </script>
 
 
@@ -78,9 +118,9 @@ const inputs = [
     </div>
     <div class="shadow rounded p-3 mt-5 flex flex-wrap justify-between">
       <CarAddSelect
-        title="Make *"
+        title="Brand *"
         :options="brands"
-        name="make"
+        name="brand"
         @change-input="onChangeInput"
       />
       <CarAddInput
@@ -98,6 +138,12 @@ const inputs = [
         @change-input="onChangeInput"
       />
       <CarAddImage @change-input="onChangeFile" />
+      <div>
+        <button class="bg-green-500 text-white rounded py-2 px-7 mt-2" @click="handleSubmit">
+          Submit
+        </button>
+        <p v-if="errorMessage" class="mt-3 text-red-400">{{ errorMessage }}</p>
+      </div>
     </div>
   </div>
 </template>

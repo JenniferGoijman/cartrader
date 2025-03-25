@@ -1,4 +1,4 @@
-import type { QueryParams } from "~/server/api/cars/[city]";
+import type { QueryParams } from "~/server/api/cars/[city].get";
 import type { CarModel } from "~/types/Car.model";
 
 export const useFetchCars = async (city: string, filter: QueryParams) => {

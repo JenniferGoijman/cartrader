@@ -2,7 +2,7 @@ export type CarModel = {
   id: number;
   name: string;
   price: number;
-  url: string;
+  image: string;
   seats: number;
   brand: string;
   miles: string;

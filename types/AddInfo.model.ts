@@ -1,5 +1,5 @@
 export type AddInfo = {
-  make: string;
+  brand: string;
   model: string;
   year: string;
   miles: string;
@@ -8,5 +8,5 @@ export type AddInfo = {
   seats: string;
   features: string;
   description: string;
-  image: File | null;
+  image: File | string;
 }

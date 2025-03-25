@@ -10,7 +10,7 @@ defineProps<{
 <template>
   <div class="mt-10">
     <NuxtImg
-      :src="car.url"
+      :src="car.image"
       :alt="car.name"
       class="w-full"
     />

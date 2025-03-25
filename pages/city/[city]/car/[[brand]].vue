@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { QueryParams } from '~/server/api/cars/[city]';
+import type { QueryParams } from '~/server/api/cars/[city].get';
 
 const route = useRoute();
 const queryParams = route.query as QueryParams;
