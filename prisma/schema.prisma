@@ -9,8 +9,8 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("SUPABASE_URL")
+  provider = "sqlite"
+  url      = "file:./dev.db"
 }
 
 model Car {
@@ -24,7 +24,7 @@ model Car {
   image       String
   seats       Int
   miles       Int
-  features    String[]
+  features    String
   description String
   listerId    String
   messages    Message[]

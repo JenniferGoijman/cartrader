@@ -86,7 +86,7 @@ const handleSubmit = async () => {
     year: parseInt(info.value.year),
     seats: parseInt(info.value.seats),
     miles: parseInt(info.value.miles),
-    features: info.value.features.split(','),
+    features: info.value.features,
     image: 'www.example.com',
     listerId: '111'
   };

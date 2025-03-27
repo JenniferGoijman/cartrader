@@ -12,7 +12,7 @@ const schema = Joi.object({
   miles: Joi.number().required().min(0),
   city: Joi.string().required().min(2),
   seats: Joi.number().required().min(1).max(1000),
-  features: Joi.array().items(Joi.string()),
+  features: Joi.string(),
   image: Joi.string().required(),
   listerId: Joi.string().required(),
   price: Joi.number().min(0),

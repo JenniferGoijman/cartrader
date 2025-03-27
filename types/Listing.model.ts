@@ -23,7 +23,7 @@ export type ListingPost = {
   image: string;
   seats: number;
   miles: number;
-  features: string[];
+  features: string;
   description: string;
   listerId: string;
 }

@@ -1,5 +1,5 @@
 import cars from "@/data/cars.json";
-import type { CarModel } from "~/types/Car.model";
+import type { CarModel, CarModelResponse } from "~/types/Car.model";
 
 export interface QueryParams {
   brand?: string;
@@ -11,7 +11,7 @@ export default defineEventHandler((event) => {
   const { city } = event.context.params || {};
   const { brand, minPrice, maxPrice } = getQuery(event) as QueryParams;
 
-  let filteredCars = cars as CarModel[];
+  let filteredCars = cars as CarModelResponse[];
 
   if (city) {
     filteredCars = cars.filter(car => car.city?.toLowerCase() === city.toLowerCase());
@@ -29,5 +29,5 @@ export default defineEventHandler((event) => {
     filteredCars = filteredCars.filter(car => car.price <= parseInt(maxPrice));
   };
 
-  return filteredCars;
+  return filteredCars.map(car => ({...car, features: car.features.split(',')} as CarModel));
 })

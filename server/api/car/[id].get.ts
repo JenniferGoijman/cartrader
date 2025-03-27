@@ -1,5 +1,5 @@
 import cars from "@/data/cars.json";
-import type { CarModel } from "~/types/Car.model";
+import type { CarModel, CarModelResponse } from "~/types/Car.model";
 
 export interface QueryParams {
   brand?: string;
@@ -10,7 +10,7 @@ export interface QueryParams {
 export default defineEventHandler((event) => {
   const { id } = event.context.params || {};
 
-  const car: CarModel | undefined = cars.find(car => car.id === parseInt(id));
+  const car: CarModelResponse | undefined = cars.find(car => car.id === parseInt(id));
 
   if (!car) {
     throw createError({
@@ -19,5 +19,5 @@ export default defineEventHandler((event) => {
     });
   }
 
-  return car;
+  return { ...car, features: car.features.split(',') } as CarModel;
 })

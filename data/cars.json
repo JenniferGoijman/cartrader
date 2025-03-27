@@ -7,7 +7,7 @@
     "seats": 7,
     "brand": "Toyota",
     "miles": "10,000",
-    "features": ["No Accidents", "Low KM", "Vehicle Detailed", "Leather Interior", "Advanced Safety Features"],
+    "features": "No Accidents,Low KM,Vehicle Detailed,Leather Interior,Advanced Safety Features",
     "description": "The Toyota Land Cruiser 250 VX-L combines rugged off-road capability with luxurious comfort, making it perfect for both city driving and adventurous journeys."
   },
   {
@@ -18,7 +18,7 @@
     "seats": 5,
     "brand": "Range Rover",
     "miles": "14,666",
-    "features": ["No Accidents", "Low KM", "Vehicle Detailed", "Leather Interior"],
+    "features": "No Accidents,Low KM,Vehicle Detailed,Leather Interior",
     "description": "The Range Rover Sport combines luxury and performance, offering a smooth ride, advanced technology, and a sleek design. Perfect for both city driving and off-road adventures."
   },
   {
@@ -29,7 +29,7 @@
     "seats": 5,
     "brand": "Rolls Royce",
     "miles": "53,666",
-    "features": ["No Accidents", "Low KM", "Vehicle Detailed", "Leather Interior"],
+    "features": "No Accidents,Low KM,Vehicle Detailed,Leather Interior",
     "description": "The Rolls Royce Ghost is the epitome of luxury, offering unparalleled comfort, cutting-edge technology, and a whisper-quiet ride. A true statement of elegance and sophistication."
   },
   {
@@ -40,7 +40,7 @@
     "seats": 5,
     "brand": "Porsche",
     "miles": "0",
-    "features": ["No Accidents", "Low KM", "Vehicle Detailed", "Leather Interior"],
+    "features": "No Accidents,Low KM,Vehicle Detailed,Leather Interior",
     "description": "The Porsche Taycan is a fully electric sports car that delivers thrilling performance, stunning design, and zero emissions. Experience the future of driving with this cutting-edge vehicle."
   },
   {
@@ -52,7 +52,7 @@
     "brand": "Land Rover",
     "city": "Toronto",
     "miles": "0",
-    "features": ["No Accidents", "Low KM", "Vehicle Detailed", "Leather Interior"],
+    "features": "No Accidents,Low KM,Vehicle Detailed,Leather Interior",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis odio et"
   },
   {
@@ -65,7 +65,7 @@
     "brand": "Toyota",
     "city": "Toronto",
     "miles": "0",
-    "features": ["No Accidents", "Low KM", "Vehicle Detailed", "Leather Interior"],
+    "features": "No Accidents,Low KM,Vehicle Detailed,Leather Interior",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis odio et"
   },
   {
@@ -78,7 +78,7 @@
     "brand": "Toyota",
     "city": "Toronto",
     "miles": "0",
-    "features": ["No Accidents", "Low KM", "Vehicle Detailed", "Leather Interior"],
+    "features": "No Accidents,Low KM,Vehicle Detailed,Leather Interior",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis odio et"
   },
   {
@@ -91,7 +91,7 @@
     "brand": "Porsche",
     "city": "Toronto",
     "miles": "0",
-    "features": ["No Accidents", "Low KM", "Vehicle Detailed", "Leather Interior"],
+    "features": "No Accidents,Low KM,Vehicle Detailed,Leather Interior",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis odio et"
   },
   {
@@ -104,7 +104,7 @@
     "brand": "Kia",
     "city": "Miami",
     "miles": "0",
-    "features": ["No Accidents", "Low KM", "Vehicle Detailed", "Leather Interior"],
+    "features": "No Accidents,Low KM,Vehicle Detailed,Leather Interior",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis odio et"
   }
 ]
