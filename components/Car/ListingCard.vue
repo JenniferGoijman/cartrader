@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { Listing } from '~/types/Listing.model';
+import type { ListingResponse } from '~/types/Listing.model';
 
 defineProps<{
-  listing: Listing,
+  listing: ListingResponse,
 }>();
 </script>
 

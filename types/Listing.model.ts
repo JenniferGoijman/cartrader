@@ -13,6 +13,14 @@ export type Listing = {
   description: string;
 }
 
+export type ListingResponse = {
+  id: number;
+  image: string;
+  name: string;
+  price: number;
+}
+
+
 export type ListingPost = {
   name: string;
   brand: string;

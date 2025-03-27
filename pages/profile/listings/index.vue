@@ -3,7 +3,7 @@ definePageMeta({
   layout: "custom",
 });
 
-const { listings } = useCars();
+const { data: listings } = await useFetch(`/api/car/listings/user/111`); // TODO: add userId
 </script>
 
 <template>
