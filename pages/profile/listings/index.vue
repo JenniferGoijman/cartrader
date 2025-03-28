@@ -3,7 +3,12 @@ definePageMeta({
   layout: "custom",
 });
 
-const { data: listings } = await useFetch(`/api/car/listings/user/111`); // TODO: add userId
+const { data: listings, refresh } = await useFetch(`/api/car/listings/user/111`); // TODO: add userId
+
+const handleDelete = async (id: number) => {
+  await $fetch(`/api/car/listings/${id}`, { method: 'DELETE' });
+  refresh();
+}
 </script>
 
 <template>
@@ -32,6 +37,7 @@ const { data: listings } = await useFetch(`/api/car/listings/user/111`); // TODO
         v-for="listing in listings"
         :key="listing.id"
         :listing="listing"
+        @delete-listing="handleDelete"
       />
     </div>
   </div>

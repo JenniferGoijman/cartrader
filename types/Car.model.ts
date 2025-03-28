@@ -5,7 +5,7 @@ export type CarModelResponse = {
   image: string;
   seats: number;
   brand: string;
-  miles: string;
+  miles: number;
   features: string;
   description: string;
 }
@@ -17,7 +17,7 @@ export type CarModel = {
   image: string;
   seats: number;
   brand: string;
-  miles: string;
+  miles: number;
   features: string[];
   description: string;
 }

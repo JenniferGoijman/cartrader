@@ -6,7 +6,7 @@
     "image": "https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2023/08/23/16928101048400.jpg",
     "seats": 7,
     "brand": "Toyota",
-    "miles": "10,000",
+    "miles": 10000,
     "features": "No Accidents,Low KM,Vehicle Detailed,Leather Interior,Advanced Safety Features",
     "description": "The Toyota Land Cruiser 250 VX-L combines rugged off-road capability with luxurious comfort, making it perfect for both city driving and adventurous journeys."
   },
@@ -17,7 +17,7 @@
     "image": "https://www.carhelpcanada.com/wp-content/uploads/2019/12/2020-Range-Rover-Evoque-2.jpg",
     "seats": 5,
     "brand": "Range Rover",
-    "miles": "14,666",
+    "miles": 14666,
     "features": "No Accidents,Low KM,Vehicle Detailed,Leather Interior",
     "description": "The Range Rover Sport combines luxury and performance, offering a smooth ride, advanced technology, and a sleek design. Perfect for both city driving and off-road adventures."
   },
@@ -28,7 +28,7 @@
     "image": "https://robbreport.com/wp-content/uploads/2021/03/1-5.jpg?w=1000",
     "seats": 5,
     "brand": "Rolls Royce",
-    "miles": "53,666",
+    "miles": 53666,
     "features": "No Accidents,Low KM,Vehicle Detailed,Leather Interior",
     "description": "The Rolls Royce Ghost is the epitome of luxury, offering unparalleled comfort, cutting-edge technology, and a whisper-quiet ride. A true statement of elegance and sophistication."
   },
@@ -39,7 +39,7 @@
     "image": "https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXkBuNYdMGF4tl3U0%25z8rMHIspMBvMZq6G5OtgSv31nBJaA4qh4NSEGewirQ91wRmWBi2Ch7gVdcQTxUlhDfHJIspAnPpsMiZJyNO7MctBvonm4f8dXFyInPED6u6cIN9nReRv8o4y7z9V6F%25vUqJ6spAnPT0NiZJyNKA9ctBvoqKLf8dXFOcvPED6uTDWN9nRe2DIo4y7zVpkF%25m8cAzGs8bGVC3F5xc3eUNSWa9vJA4q8C",
     "seats": 5,
     "brand": "Porsche",
-    "miles": "0",
+    "miles": 0,
     "features": "No Accidents,Low KM,Vehicle Detailed,Leather Interior",
     "description": "The Porsche Taycan is a fully electric sports car that delivers thrilling performance, stunning design, and zero emissions. Experience the future of driving with this cutting-edge vehicle."
   },
@@ -51,7 +51,7 @@
     "seats": 5,
     "brand": "Land Rover",
     "city": "Toronto",
-    "miles": "0",
+    "miles": 0,
     "features": "No Accidents,Low KM,Vehicle Detailed,Leather Interior",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis odio et"
   },
@@ -64,7 +64,7 @@
     "seats": 5,
     "brand": "Toyota",
     "city": "Toronto",
-    "miles": "0",
+    "miles": 0,
     "features": "No Accidents,Low KM,Vehicle Detailed,Leather Interior",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis odio et"
   },
@@ -77,7 +77,7 @@
     "seats": 5,
     "brand": "Toyota",
     "city": "Toronto",
-    "miles": "0",
+    "miles": 0,
     "features": "No Accidents,Low KM,Vehicle Detailed,Leather Interior",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis odio et"
   },
@@ -90,7 +90,7 @@
     "seats": 5,
     "brand": "Porsche",
     "city": "Toronto",
-    "miles": "0",
+    "miles": 0,
     "features": "No Accidents,Low KM,Vehicle Detailed,Leather Interior",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis odio et"
   },
@@ -103,7 +103,7 @@
     "seats": 5,
     "brand": "Kia",
     "city": "Miami",
-    "miles": "0",
+    "miles": 0,
     "features": "No Accidents,Low KM,Vehicle Detailed,Leather Interior",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis odio et"
   }

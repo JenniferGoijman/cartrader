@@ -4,6 +4,8 @@ import type { ListingResponse } from '~/types/Listing.model';
 defineProps<{
   listing: ListingResponse,
 }>();
+
+const emit = defineEmits(['delete-listing']);
 </script>
 
 <template>
@@ -21,7 +23,7 @@ defineProps<{
         :to="`/profile/listings/view/${listing.id}`"
         >View</NuxtLink
       >
-      <p class="text-red-400 cursor-pointer">Delete</p>
+      <p class="text-red-400 cursor-pointer" @click="emit('delete-listing', listing.id)">Delete</p>
     </div>
   </div>
 </template>
