@@ -92,20 +92,14 @@ const handleSubmit = async () => {
   };
 
   try {
-    const response = await $fetch("/api/car/listings", {
+    await $fetch("/api/car/listings", {
       method: 'POST',
       body
     });
-    console.log('>>> response', response)
+
     navigateTo('/profile/listings');
   } catch (error) {
-    if (error instanceof Error) {
-      errorMessage.value = error.message;
-    } else if (typeof error === 'object' && error !== null && 'statusMessage' in error) {
-      errorMessage.value = (error as { statusMessage: string }).statusMessage;
-    } else {
-      errorMessage.value = 'An unknown error occurred';
-    }
+    errorMessage.value = errorHandler(error);
   }
 }
 </script>

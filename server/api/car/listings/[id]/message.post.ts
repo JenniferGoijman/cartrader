@@ -5,11 +5,11 @@ import type { MessagePost } from "~/types/Message.model";
 const prisma = new PrismaClient();
 
 const schema = Joi.object({
-  name: Joi.string().email({
+  name: Joi.string().required(),
+  email: Joi.string().email({
     minDomainSegments: 2,
     tlds: { allow: ["com", "net"] }
   }),
-  email: Joi.string().required(),
   phone: Joi.string().length(10).pattern(/^[0-9]+$/).required(),
   message: Joi.string().min(20).required(),
 })
