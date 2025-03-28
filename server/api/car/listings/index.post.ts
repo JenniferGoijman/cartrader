@@ -19,12 +19,6 @@ const schema = Joi.object({
   description: Joi.string().min(20)
 })
 
-export interface QueryParams {
-  brand?: string;
-  minPrice?: string;
-  maxPrice?: string;
-}
-
 export default defineEventHandler(async (event) => {
   const body: ListingPost = await readBody(event);
 

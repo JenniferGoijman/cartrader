@@ -1,12 +1,6 @@
 import cars from "@/data/cars.json";
 import type { CarModel, CarModelResponse } from "~/types/Car.model";
 
-export interface QueryParams {
-  brand?: string;
-  minPrice?: string;
-  maxPrice?: string;
-}
-
 export default defineEventHandler((event) => {
   const { id } = event.context.params || {};
 
