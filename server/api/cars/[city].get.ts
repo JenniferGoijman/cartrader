@@ -1,5 +1,7 @@
-import cars from "@/data/cars.json";
-import type { CarModel, CarModelResponse } from "~/types/Car.model";
+import { PrismaClient } from "@prisma/client";
+import type { CarModel } from "~/types/Car.model";
+
+const prisma = new PrismaClient();
 
 export interface QueryParams {
   brand?: string;
@@ -7,27 +9,21 @@ export interface QueryParams {
   maxPrice?: string;
 }
 
-export default defineEventHandler((event) => {
+export default defineEventHandler(async (event) => {
   const { city } = event.context.params || {};
   const { brand, minPrice, maxPrice } = getQuery(event) as QueryParams;
 
-  let filteredCars = cars as CarModelResponse[];
+  const cars = await prisma.car.findMany({
+    where: {
+      city: city.toLowerCase(),
+      brand: brand?.toLowerCase(),
+      price: {
+        gte: minPrice ? parseInt(minPrice) : undefined,
+        lte: maxPrice ? parseInt(maxPrice) : undefined,
+      }
 
-  if (city) {
-    filteredCars = cars.filter(car => car.city?.toLowerCase() === city.toLowerCase());
-  };
+    }
+  });
 
-  if (brand) {
-    filteredCars = filteredCars.filter(car => car.brand.toLowerCase() === brand.toLowerCase());
-  };
-
-  if (minPrice) {
-    filteredCars = filteredCars.filter(car => car.price >= parseInt(minPrice));
-  };
-
-  if (maxPrice) {
-    filteredCars = filteredCars.filter(car => car.price <= parseInt(maxPrice));
-  };
-
-  return filteredCars.map(car => ({...car, features: car.features.split(',')} as CarModel));
+  return cars.map(car => ({...car, features: car.features.split(',')} as CarModel));
 })
